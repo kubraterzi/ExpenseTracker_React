@@ -2,6 +2,10 @@ import React from "react";
 import Chart from "../Chart/Chart";
 
 const ExpensesChart = (props) => {
+  if (props.expenses.length === 0) {
+    return null;
+  }
+
   const chartDataPoints = [
     { label: "Jan", value: 0 },
     { label: "Feb", value: 0 },
